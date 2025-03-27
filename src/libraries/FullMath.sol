@@ -16,10 +16,10 @@ library FullMath {
         uint256 h,
         uint256 d
     ) private pure returns (uint256) {
-        uint256 pow2 = d & -d;
+        uint256 pow2 = d & (~d + 1);
         d /= pow2;
         l /= pow2;
-        l += h * ((-pow2) / pow2 + 1);
+        l += h * (((~pow2 + 1)) / pow2 + 1);
         uint256 r = 1;
         r *= 2 - d * r;
         r *= 2 - d * r;

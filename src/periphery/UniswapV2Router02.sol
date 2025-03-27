@@ -1,4 +1,4 @@
-pragma solidity =0.8.28;
+pragma solidity >=0.8.28;
 
 import '../interfaces/IUniswapV2Factory.sol';
 import '../libraries/TransferHelper.sol';
